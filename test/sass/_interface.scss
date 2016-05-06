@@ -12,6 +12,7 @@ $color-btn-cool: $green;
   border-radius: none;
   user-select: none;
   color: $color-btn-text;
+  @include clearfix;
   &:hover{
     color: $color-btn-text;
     background: $yellow;

@@ -13140,7 +13140,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"/Users/otura/gulp/test/vue/components/header.vue":7,"vue":4,"vue-hot-reload-api":2,"vueify-insert-css":5}],9:[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert("\n.test{\n    position: fixed;\n    z-index: 9999;\n    background: cyan;\n    width: 300px;\n    height: 300px;\n}\n")
+var __vueify_style__ = require("vueify-insert-css").insert("\n.test{\n    position: fixed;\n    z-index: 9999;\n    background: cyan;\n    width: 100vh;\n    height: 100vh;\n    left:0;right:0;\n    margin-right: auto;\n    margin-left: auto;\n}\n")
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -13165,14 +13165,14 @@ exports.default = {
     }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n <header-component></header-component>\n<div class=\"test\">\n    <h1>Popup information</h1>\n</div>\n <div class=\"row\">\n <div class=\"col-xs-6 col-md-3\" v-for=\"n in 4\">\n     <a href=\"#\" class=\"thumbnail\">\n         <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=170%C3%97180&amp;w=170&amp;h=180\" alt=\"...\">\n     </a>\n </div>\n ...\n </div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n <header-component></header-component>\n<div class=\"test\">\n    <h1>Popup information</h1>\n    <h2>If you want it pockemon</h2>\n</div>\n <div class=\"row\">\n <div class=\"col-xs-6 col-md-3\" v-for=\"n in 4\">\n     <a href=\"#\" class=\"thumbnail\">\n         <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=170%C3%97180&amp;w=170&amp;h=180\" alt=\"...\">\n     </a>\n </div>\n ...\n </div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/otura/gulp/test/vue/components/main.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache["\n.test{\n    position: fixed;\n    z-index: 9999;\n    background: cyan;\n    width: 300px;\n    height: 300px;\n}\n"] = false
+    require("vueify-insert-css").cache["\n.test{\n    position: fixed;\n    z-index: 9999;\n    background: cyan;\n    width: 100vh;\n    height: 100vh;\n    left:0;right:0;\n    margin-right: auto;\n    margin-left: auto;\n}\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {

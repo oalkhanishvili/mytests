@@ -3,14 +3,18 @@
         position: fixed;
         z-index: 9999;
         background: cyan;
-        width: 300px;
-        height: 300px;
+        width: 100vh;
+        height: 100vh;
+        left:0;right:0;
+        margin-right: auto;
+        margin-left: auto;
     }
 </style>
 <template>
     <header-component></header-component>
    <div class="test">
        <h1>Popup information</h1>
+       <h2>If you want it pockemon</h2>
    </div>
     <div class="row">
     <div class="col-xs-6 col-md-3" v-for="n in 4">
