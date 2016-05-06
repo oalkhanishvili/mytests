@@ -1,0 +1,19 @@
+body{
+  color: red;
+}
+.notification{
+  background: green;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation-name: slide;
+  animation-timing-function: cubic-bezier(.17,.67,.81,.57);
+  animation-duration: .8s;
+}
+@keyframes slide {
+  0% {transform: translateX(100%);}
+  40% {transform: translateX(0);}
+  60% {transform: scale(1.02);}
+  80% {transform: scale(.9);}
+  80% {transform: scale(1);}
+}

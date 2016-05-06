@@ -1,0 +1,7 @@
+.background{
+  background: $yellow;
+  display: table;
+  .jumbotron{
+    @include backImage('../images/bridge.jpg', 300px);
+  }
+}

@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Bangers|Roboto+Mono|Luckiest+Guy|Cuprum|Teko|Chicle|Rubik+Mono+One);
+
+@font-face {
+    font-family: bpg_boxo;
+    src: url(../fonts/bpg_boxo-boxo.ttf);
+}
+@font-face {
+    font-family: bpg_q;
+    src: url(../fonts/bpg_quadrosquare_2013.ttf);
+}
+@font-face {
+    font-family: bpg_super;
+    src: url(../fonts/bpg_supersquare_caps_2013.ttf);
+}
+
+$black: #000;
+$white: #fff;
+$red:   red;
+$blue:  blue;
+
+
+$font-menu:'bpg_super', sans-serif;
+$font-color:$white;
