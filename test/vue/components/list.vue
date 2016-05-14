@@ -3,7 +3,6 @@
     }
 </style>
 <template>
-    <header-component></header-component>
     <div class="media" v-for="n in 5">
         <div class="media-left">
             <a href="#">
@@ -20,15 +19,12 @@
 
 <script>
 
-    import HeaderComponent from '/Users/otura/gulp/test/vue/components/header.vue';
+    // import HeaderComponent from '/Users/Master/Documents/mytests/test/vue/components/header.vue';
     export default{
         data(){
             return{
                 msg:'hello vue'
             }
-        },
-        components:{
-            HeaderComponent,
         }
     }
 </script>

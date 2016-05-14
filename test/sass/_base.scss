@@ -1,6 +1,50 @@
 body {
   font-family: $font-main;
   color: $cyan;
+  overflow-x: hidden;
+}
+.product-wrp{
+  background: $yellow;
+
+  & > .show-product{
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    width: 70%;
+    height: 356px;
+    color: rgb(99, 99, 99);
+    margin: 5% 15%;
+    // margin-bottom: 56px;
+    padding: 64px 20px 50px 15px;
+    background: url("../img/slide-prod-bg.png") 0% 0% repeat-x;
+    & .image, & .caption{
+      display: inline-block;
+      vertical-align: top;
+    }
+    &::before{
+      position: absolute;
+      display: inline-block;
+      content: "";
+      top: 0px;
+      left: auto;
+      right: 100%;
+      margin-right: -1px;
+      width: 49px;
+      height: 356px;
+      background-image: url("../img/slide-prod-left.png");
+    }
+    &::after{
+      position: absolute;
+      top: 0px;
+      left: 100%;
+      margin-left: -1px;
+      display: inline-block;
+      content: "";
+      width: 42px;
+      height: 356px;
+      background: url("../img/slide-prod-right.png") 0% 0% no-repeat;
+    }
+  }
 }
 
 .notification {

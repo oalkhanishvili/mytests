@@ -18,50 +18,49 @@
     transform: translateX(100%);
     opacity: 0;
   }
+
 </style>
 
 <template>
-  <header-component></header-component>
 
-  <div class="row">
-    <div class="col-md-6">
-        <button @click="effect = !effect">agasg</button>
-        <div class="notification" v-if="effect" transition="expand">
-          some text
-        </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-
-        <button type="submit" class="btn btn-default" >Submit</button>
+<div class="page_wrp">
+  <header>
+    <div class="header__top">
+      <div class="container">
+        <nav id="top-links" class="nav toggle-wrap">
+          <a class="toggle fa fa-user" href="#"></a>
+          <ul class="toggle_cont" style="display: none; margin-top: 15px; opacity: 0;">
+            <li class="toggle-wrap">
+            <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=account/account" class="toggle"> My Account </a>
+              <ul class="toggle_cont toggle_cont__right" style="display: none; margin-top: 15px; opacity: 0;">
+                <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=account/login">Sign In</a> </li>
+                <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=account/register">Registration</a> </li>
+              </ul>
+            </li>
+            <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=account/wishlist" id="compare-total2">
+              Wish List </a> </li>
+            <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=checkout/cart"> Shopping Cart </a> </li>
+            <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=checkout/checkout"> Checkout </a> </li>
+          </ul>
+        </nav>
+      </div>
     </div>
-  </div>
-  <h1 class="red">{{msg}}</h1>
-  <h2>title helper text</h2>
+    <div class="container background">
+      <h1>Test Page</h1>
+
+      <h1>Hello App!</h1>
+      <p>
+          <!-- use v-link directive for navigation. -->
+          <a v-link="{ path: '/' }"><button class="btn-default">Home</button></a>
+          <a v-link="{ path: '/foo' }"><button class="btn-hot">Foo</button></a>
+          <a v-link="{ path: '/bar' }"><button class="btn-cool">Bar</button></a>
+      </p>
+    </div>
+  </header>
+
+  <router-view></router-view>
+
+  <!-- footer -->
+  <footer></footer>
+</div>
 </template>
-
-<script>
-  import HeaderComponent from '/Users/otura/gulp/test/vue/components/header.vue';
-
-  export default {
-
-  data () {
-    return {
-      effect: false,
-      msg: 'Hello world!',
-      descroption: 'Test demplate for do'
-    }
-  },
-  components: {
-    HeaderComponent
-  },
-  ready(){
-    console.log('compiled');
-  }
-}
-</script>
