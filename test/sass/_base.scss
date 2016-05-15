@@ -3,17 +3,40 @@ body {
   color: $cyan;
   overflow-x: hidden;
 }
+section.about-us{
+  position: relative;
+  & > div::before{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 56px;
+    content: "";
+    background: url("../img/product-wave-bottom.png") 50% 0% repeat-x scroll;
+  }
+  & > div::after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: auto;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 134px;
+    background: url("../img/product-wave-top.png") 50% 100% repeat-x scroll;
+  }
+}
 .product-wrp{
-  background: $yellow;
-
   & > .show-product{
     display: inline-block;
     text-align: left;
     position: relative;
+    z-index: 4;
     width: 70%;
-    height: 356px;
+    height: 407px;
     color: rgb(99, 99, 99);
-    margin: 5% 15%;
+    margin: auto 15%;
     // margin-bottom: 56px;
     padding: 64px 20px 50px 15px;
     background: url("../img/slide-prod-bg.png") 0% 0% repeat-x;

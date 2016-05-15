@@ -35,11 +35,6 @@
     export default{
         components: {
           AboutUs
-        },
-        data(){
-            return{
-                msg:'hello vue'
-            }
         }
     }
 </script>

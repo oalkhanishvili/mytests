@@ -11,12 +11,11 @@ import List from './components/list.vue';
 // Attach router to instance
 Vue.use(VueRouter);
 
-
-
 // Create a router instance.
 // You can pass in additional options here, but let's
 // keep it simple for now.
 var router = new VueRouter();
+
 
 // Define some routes.
 // Each route should map to a component. The "component" can
@@ -40,7 +39,6 @@ router.map({
 // The router will create an instance of App and mount to
 // the element matching the selector #app.
 router.start(App, '#app');
-
 
 // new Vue({
 //     el: 'body',

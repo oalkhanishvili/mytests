@@ -27,6 +27,13 @@
   <header>
     <div class="header__top">
       <div class="container">
+        <ul id="nav" data-0="position:static;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
+          <li>foo</li>
+          <li>bar</li>
+        </ul>
+        <!--placeholder div to prevent jumpy content when nav gets pinned-->
+        <div style="padding:1em;" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#nav" data-edge-strategy="set">&nbsp;</div>
+
         <nav id="top-links" class="nav toggle-wrap">
           <a class="toggle fa fa-user" href="#"></a>
           <ul class="toggle_cont" style="display: none; margin-top: 15px; opacity: 0;">
@@ -42,6 +49,10 @@
             <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=checkout/cart"> Shopping Cart </a> </li>
             <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=checkout/checkout"> Checkout </a> </li>
           </ul>
+
+          <a v-link="{ path: '/' }"><button class="btn-default">Home</button></a>
+          <a v-link="{ path: '/foo' }"><button class="btn-hot">Foo</button></a>
+          <a v-link="{ path: '/bar' }"><button class="btn-cool">Bar</button></a>
         </nav>
       </div>
     </div>
@@ -51,16 +62,24 @@
       <h1>Hello App!</h1>
       <p>
           <!-- use v-link directive for navigation. -->
-          <a v-link="{ path: '/' }"><button class="btn-default">Home</button></a>
-          <a v-link="{ path: '/foo' }"><button class="btn-hot">Foo</button></a>
-          <a v-link="{ path: '/bar' }"><button class="btn-cool">Bar</button></a>
+
       </p>
     </div>
   </header>
 
-  <router-view></router-view>
+  <router-view
+      keep-alive
+  >
+  </router-view>
 
   <!-- footer -->
   <footer></footer>
 </div>
 </template>
+<script type="text/javascript">
+window.onload = function() {
+  skrollr.init({
+    forceHeight: false
+  });
+}
+</script>

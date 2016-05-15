@@ -50,5 +50,9 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "parallax-scroll": "^0.3.0",
+    "skrollr": "^0.6.26"
   }
 }
