@@ -27,10 +27,7 @@
   <header>
     <div class="header__top">
       <div class="container">
-        <ul id="nav" data-0="position:static;" data-top-top="position:fixed;top:0;" data-edge-strategy="set">
-          <li>foo</li>
-          <li>bar</li>
-        </ul>
+
         <!--placeholder div to prevent jumpy content when nav gets pinned-->
         <div style="padding:1em;" data-0="display:none;" data-top-top="display:block;" data-anchor-target="#nav" data-edge-strategy="set">&nbsp;</div>
 
@@ -50,9 +47,9 @@
             <li> <a href="http://livedemo00.template-help.com/opencart_58387/index.php?route=checkout/checkout"> Checkout </a> </li>
           </ul>
 
-          <a v-link="{ path: '/' }"><button class="btn-default">Home</button></a>
+          <!-- <a v-link="{ path: '/' }"><button class="btn-default">Home</button></a>
           <a v-link="{ path: '/foo' }"><button class="btn-hot">Foo</button></a>
-          <a v-link="{ path: '/bar' }"><button class="btn-cool">Bar</button></a>
+          <a v-link="{ path: '/bar' }"><button class="btn-cool">Bar</button></a> -->
         </nav>
       </div>
     </div>
@@ -60,10 +57,20 @@
       <h1>Test Page</h1>
 
       <h1>Hello App!</h1>
-      <p>
-          <!-- use v-link directive for navigation. -->
+      <div class="container">
+        <div class="row">
+          <div  data-0="position:relative;top:30%;transition: all 2s;"
+          data--100-top="position:fixed;top:0;left:0;width:100%;background:red;transition: all 2s;" data-edge-strategy="set">
+            <ul id="nav" class="container">
+              <li><a v-link="{ path: '/' }">Home</a></li>
+              <li><a v-link="{ path: '/foo' }">Foo</a></li>
+              <li><a v-link="{ path: '/bar' }">Foo</a></li>
+            </ul>
+          </div>
 
-      </p>
+        </div>
+      </div>
+
     </div>
   </header>
 
